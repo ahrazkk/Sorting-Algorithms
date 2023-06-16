@@ -1,0 +1,74 @@
+
+InsertionSort:
+Has been completed, and it works using the metrics. I had issues determining where myCopy and myCompare were meant to be used, but I have fixed them. The "j>= 0" in the while statement should not have used a myCompare function. I could be wrong about it, but as for now, it seems correct.
+
+MergeSort:
+MergeSort is also completed and working. The same issue as before was also with this one, I'm not 100% confident in the places I used myCopy and mySwap, but the code does work.
+
+ 
+   Sorting Algorithms:
+The sorting algorithm is in its best case when all of the integers are sorted. The worst-case scenario is when the numbers are in reverse order and  When the numbers are somewhat sorted or randomly placed without being the worst or best case; this is an average case.
+
+	Insertion sort theoretical analysis :
+
+For the best-case time complexity of the insertion sort algorithm, it's O(n) time complexity or linear time. 
+When I used the numbers (1,2,3,4,5), I got:
+Comparisons: 4
+Swaps: 0
+Copy operations: 4
+
+For the worst-case complexity of the insertion sort algorithm, the time complexity is quadratic with the equation (n^2)
+When using the numbers (5,4,3,2,1), the results I got were:
+Comparisons: 10
+Swaps: 0
+Copy operations: 14
+
+#NOTE:
+
+One note I do want to add is that I am pretty sure InsertionSort in its code has "for (i = first+1; i <= last; i++) {" where first +1 is the same as i=1
+
+ But if you change it to this "for (i = first; i <= last; i++) {" and since first is equal to 0, the result makes more sense in the manner for time complexities. For example, since we know that insertionSorts worst case is O(n^2), for worst case, mathematically for 5 values, the answer should be 25 operations in total, so when you do it with i = first+1, you get 24 total operations, and if you do it with i = first (which is the same as i = 0), you get 25 which seems to be correct, and same with any other number. so if n=7, operations =49, just like the formula, 
+
+the reason I add this note is that on every website, insertion sort is i=1, and I did that as well for my first lab, and ill keep that code for this lab as well, and also I'm not entirely sure about the connection between the time complexity and total # of operations
+this is because if you look at the best case, it's supposed to be O(n), but even with the i=0, i would get:
+Comparisons: 4
+Swaps: 0
+Copy operations: 5
+
+If you add the total number of operations, it doesn't make sense, so even if it works the first way, I don't see it working for this unless it's because of something else I've missed or a connection I don't see or remember. One possiblity is that since its already in order we could ignore  the Comparisons for this one and only look at the copy operations, but again I am unsure. 
+
+last thing, the average case, its said to have the formula O(n^2), but when testing values like:
+(6,7,1,8,2,3,9,5,4) which are randomized I got the output:
+
+Comparisons: 24
+Swaps: 0
+Copy operations: 26
+
+where if you divide the total operations by O(n^2) which is 81 you get 0.61, now I did the same
+
+the values seems to be total operations/n^2 which means for average case, it should be O(n^2)/2. TO prive it I did:  
+
+ 100 random non repeating numbers and got the value:
+Comparisons: 2704
+Swaps: 0
+Copy operations: 2713
+ where if you do the same thing and divide total operations by 100^2, you get 0.5417 for this case.
+
+lastly with 1000 numbers it becomes:
+Comparisons: 250942
+Swaps: 0
+Copy operations: 250947
+
+where after dividing you get 0.501889 which is almost half, meaning if you went to infinty it should be to formula O(n^2)/2
+  
+
+MergeSort:
+best case: the best case formula is  ()
+
+
+
+
+  
+
+
+
